@@ -15,6 +15,10 @@ to rename the extension's directory to the extension's key
 This extension *requires* CiviCooP's SMS API extension (`org.civicoop.smsapi`)
 in order to send the acknowledgement SMS.
 
+After installation, you'll probably want to edit the provided template for the
+acknowledgement, for example to add the name of your organisation/service and
+a contact phone number. The template must be named 'SMS STOP acknowledgement'.
+
 ### Features
 * Acknowledge unsubscribe requests with a custom reply- you can, for example,
 write an apology that includes a number to call for further assistance
