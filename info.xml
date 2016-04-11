@@ -26,7 +26,10 @@
   <compatibility>
     <ver>4.4</ver>
   </compatibility>
-  <comments></comments>
+  <comments>
+    This extension requires CiviCooP's SMS API extension (org.civicoop.smsapi)
+    in order to send the acknowledgement SMS.
+  </comments>
   <civix>
     <namespace>CRM/Smsstop</namespace>
   </civix>

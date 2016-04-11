@@ -20,8 +20,8 @@ in order to send the acknowledgement SMS.
 write an apology that includes a number to call for further assistance
 * Automatically set the contact to 'do not SMS', so CiviCRM knows not to
 attempt to send to them in future
-* The above should co-operate with the SMS Survey extension, stopping the next
-question from being sent to that contact
+* The above should co-operate with the SMS Survey extension if used,
+stopping the next question from being sent to that contact
 
 ### Links
 * <http://www.futurefirst.org.uk/>

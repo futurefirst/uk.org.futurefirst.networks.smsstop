@@ -1,5 +1,5 @@
 Package: uk.org.futurefirst.networks.smsstop
-Copyright (C) 2016, David Knoll <david@futurefirst.org.uk>
+Copyright (C) 2016, Future First <david@futurefirst.org.uk>
 Licensed under the GNU Affero Public License 3.0 (below).
 
 -------------------------------------------------------------------------------
