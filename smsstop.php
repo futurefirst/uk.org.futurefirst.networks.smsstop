@@ -185,7 +185,7 @@ function smsstop_civicrm_pre($op, $objectName, $id, &$params) {
   ORDER BY `id`         ASC
      LIMIT 1
   ");
-  $templateId = CRM_Core_DAO::getFieldValue('CRM_Core_DAO_MessageTemplate', 'SMS STOP acknowledgement', 'id', 'title');
+  $templateId = CRM_Core_DAO::getFieldValue('CRM_Core_DAO_MessageTemplate', 'SMS STOP acknowledgement', 'id', 'msg_title');
 
   // Send an acknowledgement
   // Note: from_contact_id is required if we're not logged in
