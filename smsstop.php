@@ -160,9 +160,19 @@ function smsstop_civicrm_pre($op, $objectName, $id, &$params) {
 
   // Get contact IDs
   // Note: Personally I think CRM_SMS_Provider::processInbound does these the
-  // wrong way round, as it doesn't match inbound emails.
-  $remoteCid = $params['target_contact_id'];
-  $ourCid    = $params['source_contact_id'] ?: $params['target_contact_id'];
+  // wrong way round, as it doesn't match inbound emails. So handle FF as a special case.
+  $domain = civicrm_api('Domain', 'get', array('version' => 3, 'sequential' => 1));
+  if (
+    $domain['values'][0]['name'] == 'Future First' &&
+    strpos($domain['values'][0]['domain_email'], '@futurefirst.org.uk') !== FALSE
+  ) {
+    $remoteCid = $params['source_contact_id'];
+    $ourCid    = $params['target_contact_id'] ?: $params['source_contact_id'];
+  }
+  else {
+    $remoteCid = $params['target_contact_id'];
+    $ourCid    = $params['source_contact_id'] ?: $params['target_contact_id'];
+  }
 
   CRM_Core_Error::debug_log_message("SMS STOP message received from cid $remoteCid");
 
